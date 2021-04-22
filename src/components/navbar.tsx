@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import img1 from "../assets/img/img1.jpg";
 import img2 from "../assets/img/img2.jpg";
 import img3 from "../assets/img/img3.jpg";
@@ -9,6 +9,7 @@ import menu from "../assets/img/menu.png";
 import close from "../assets/img/close.png";
 
 class Navbar extends Component {
+
   state = {
     imgCode: img1,
     menuToggled: false,
@@ -57,7 +58,7 @@ class Navbar extends Component {
             <div className="navArea">
               <ul>
                 <li>
-                  <a href="Invertime.ml" onMouseOver={() => this.changeImg(1)} onClick={() => this.changeImg(1)}>
+                  <a href='#test' onMouseOver={() => this.changeImg(1)} onClick={() => this.toggleMenu()}>
                     Home
                   </a>
                 </li>

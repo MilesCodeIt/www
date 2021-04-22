@@ -138,3 +138,41 @@
     background: red;
   }
 }
+
+.content {
+  height: 100vh;
+  display: flex;
+  background: #f00;
+}
+
+.content .left {
+  height: 100%;
+  width: 50%;
+  background: #fff;
+}
+
+.content .right {
+  height: 100%;
+  width: 50%;
+  background: #00f;
+}
+
+@media (max-width: 768px) {
+  .content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #f00;
+  }
+  .content .left {
+    height: 100%;
+    width: 100%;
+    background: #fff;
+  }
+  
+  .content .right {
+    height: 100%;
+    width: 100%;
+    background: #00f;
+  }
+}
