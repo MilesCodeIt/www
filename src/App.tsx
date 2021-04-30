@@ -3,11 +3,13 @@ import './App.css';
 import './components/navbar';
 import Navbar from './components/navbar';
 import Content from './components/content';
+import Cursor from "./components/cursor";
 
 
 function App() {
   return (
-    <div className="App">       
+    <div className="App">    
+      <Cursor />   
        <Navbar />
        <Content />       
     </div>
@@ -15,3 +17,4 @@ function App() {
 }
 
 export default App;
+
