@@ -6,14 +6,14 @@ const Cursor = () => {
   const [clicked, setClicked] = useState(false);
   const [linkHovered, setLinkHovered] = useState(false);
 
-
   useEffect(() => {
     addEventListeners();
     handleLinkHoverEvents();
+    linkOnClick();
     return () => removeEventListeners();
     // eslint-disable-next-line
   });
-  
+
   const addEventListeners = () => {
     document.addEventListener("mousemove", onMouseMove);
     document.addEventListener("mouseenter", onMouseEnter);
@@ -33,20 +33,20 @@ const Cursor = () => {
   const onMouseDown = () => {
     setClicked(true);
   };
-  
+
   const onMouseUp = () => {
     setClicked(false);
   };
-  
+
   const onMouseLeave = () => {
     setHidden(true);
   };
-  
+
   const onMouseEnter = () => {
     setHidden(false);
   };
-  
-  const onMouseMove = (e: { pageX: any; pageY: any; }) => {
+
+  const onMouseMove = (e: { pageX: any; pageY: any }) => {
     setPosition({ x: e.pageX, y: e.pageY });
   };
 
@@ -56,10 +56,16 @@ const Cursor = () => {
     document.body.addEventListener("mouseenter", handleMouseEnter);
     document.body.addEventListener("mouseleave", handleMouseLeave);
     return () => {
-      document.body.removeEventListener("mouseenter",   handleMouseEnter);
+      document.body.removeEventListener("mouseenter", handleMouseEnter);
       document.body.removeEventListener("mouseleave", handleMouseLeave);
     };
   }, []);
+
+  const linkOnClick = () => {
+    document.querySelectorAll("a").forEach((el) => {
+      el.addEventListener("click", () => setLinkHovered(false));
+    });
+  };
 
   const handleLinkHoverEvents = () => {
     document.querySelectorAll("a").forEach((el) => {
@@ -72,7 +78,6 @@ const Cursor = () => {
     });
   };
 
-
   let classclicked = clicked ? "cursor--clicked" : "";
   let classhidden = hidden ? "cursor--hidden" : "";
   let classlinkhovered = linkHovered ? "cursor--link-hovered" : "";
@@ -82,7 +87,7 @@ const Cursor = () => {
       className={`cursor ${classclicked} ${classhidden} ${classlinkhovered}`}
       style={{
         left: `${position.x}px`,
-        top: `${position.y}px`
+        top: `${position.y}px`,
       }}
     />
   );

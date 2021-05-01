@@ -10,12 +10,15 @@ import close from "../assets/img/close.png";
 
 class Navbar extends Component {
 
+
   state = {
     imgCode: img1,
     menuToggled: false,
     icon: menu,
     iconSize: 20
   };
+
+
 
   changeImg(num: number) {
     if (num === 1) {
@@ -58,27 +61,27 @@ class Navbar extends Component {
             <div className="navArea">
               <ul>
                 <li>
-                  <a href='#test' onMouseOver={() => this.changeImg(1)} onClick={() => this.toggleMenu()}>
+                  <a href='#header' onMouseOver={() => this.changeImg(1)} onClick={() => this.toggleMenu()}>
                     Home
                   </a>
                 </li>
                 <li>
-                  <a href="Invertime.ml" onMouseOver={() => this.changeImg(2)} onClick={() => this.changeImg(2)}>
+                  <a href="#about" onMouseOver={() => this.changeImg(2)} onClick={() => this.toggleMenu()}>
                     About Us
                   </a>
                 </li>
                 <li>
-                  <a href="Invertime.ml" onMouseOver={() => this.changeImg(3)} onClick={() => this.changeImg(3)}>
+                  <a href="Invertime.ml" onMouseOver={() => this.changeImg(3)} onClick={() => this.toggleMenu()}>
                     Projects
                   </a>
                 </li>
                 <li>
-                  <a href="Invertime.ml" onMouseOver={() => this.changeImg(4)} onClick={() => this.changeImg(4)}>
+                  <a href="Invertime.ml" onMouseOver={() => this.changeImg(4)} onClick={() => this.toggleMenu()}>
                     Pricing
                   </a>
                 </li>
                 <li>
-                  <a href="Invertime.ml" onMouseOver={() => this.changeImg(5)} onClick={() => this.changeImg(5)}>
+                  <a href="Invertime.ml" onMouseOver={() => this.changeImg(5)} onClick={() => this.toggleMenu()}>
                     Contact Us
                   </a>
                 </li>
