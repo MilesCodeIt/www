@@ -4,11 +4,11 @@ import Navbar from './components/navbar';
 import Content from './components/content';
 import Cursor from "./components/cursor";
 
-/*<Cursor />*/
 
 function App() {
   return (
     <div className="App">  
+    <Cursor />
        <Navbar />
        <Content />       
     </div>
