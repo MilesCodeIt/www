@@ -1,8 +1,7 @@
 var nodemailer = require('nodemailer');
 var express = require('express');
 var app = express();
-const dotenv = require('dot-env')
-const configVar = dotenv.config()
+require('dotenv').config({ path: './.env' })
 
 app.use(require('body-parser').urlencoded({ extended: false }));
 
@@ -10,7 +9,7 @@ var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
       user: 'invertime.off@gmail.com',
-      pass: configVar.pass
+      pass: ProcessingInstruction.env.MAILPASS
     }
   });
   
