@@ -11,11 +11,14 @@ export default class PricingCard extends Component {
           <div className="priceContent">
             <ul>
               <li>design</li>
+              <hr />
               <li>front-end</li>
+              <hr />
               <li>back-end</li>
+              <hr />
               <li>security</li>
             </ul>
-            <p>$666666</p>
+            <p className="price">$666666</p>
             <a href="test-uwu">Contact us</a>
           </div>
         </div>

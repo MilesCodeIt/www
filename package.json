@@ -1,53 +1,16 @@
 {
   "name": "milescode",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "miles code api",
+  "main": "index.js",
+  "repository": "https://github.com/milescodeit/milescode.git",
+  "author": "milescode",
+  "license": "MIT",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "@types/jest": "^26.0.15",
-    "@types/node": "^12.0.0",
-    "@types/react": "^17.0.3",
-    "@types/react-dom": "^17.0.0",
-    "@types/react-scroll": "^1.8.2",
-    "classnames": "^2.3.1",
-    "kursor": "^0.1.6",
-    "node-sass": "^5.0.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-helmet": "^6.1.0",
-    "react-scripts": "4.0.3",
-    "sass": "^1.32.12",
-    "scss": "^0.2.4",
-    "typescript": "^4.1.2",
-    "web-vitals": "^1.0.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "@types/react-helmet": "^6.1.1"
+    "body-parser": "^1.19.0",
+    "cross-env": "^7.0.3",
+    "express": "^4.17.1",
+    "nodemailer": "^6.6.0",
+    "nodemon": "^2.0.7"
   }
 }

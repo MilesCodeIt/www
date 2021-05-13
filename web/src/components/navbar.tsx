@@ -71,17 +71,17 @@ class Navbar extends Component {
                   </a>
                 </li>
                 <li>
-                  <a href="Invertime.ml" onMouseOver={() => this.changeImg(3)} onClick={() => this.toggleMenu()}>
+                  <a href="#projects" onMouseOver={() => this.changeImg(3)} onClick={() => this.toggleMenu()}>
                     Projects
                   </a>
                 </li>
                 <li>
-                  <a href="Invertime.ml" onMouseOver={() => this.changeImg(4)} onClick={() => this.toggleMenu()}>
+                  <a href="#pricing" onMouseOver={() => this.changeImg(4)} onClick={() => this.toggleMenu()}>
                     Pricing
                   </a>
                 </li>
                 <li>
-                  <a href="Invertime.ml" onMouseOver={() => this.changeImg(5)} onClick={() => this.toggleMenu()}>
+                  <a href="I#contactUs" onMouseOver={() => this.changeImg(5)} onClick={() => this.toggleMenu()}>
                     Contact Us
                   </a>
                 </li>
