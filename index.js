@@ -1,6 +1,7 @@
 var nodemailer = require('nodemailer');
 var express = require('express');
 var app = express();
+const dotenv = require('dot-env')
 const configVar = dotenv.config()
 
 app.use(require('body-parser').urlencoded({ extended: false }));
