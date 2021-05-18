@@ -12,12 +12,15 @@ export default function ContactUs() {
 
     const handleSubmit = (e: { preventDefault: () => void; }) => {
         e.preventDefault();
+        console.log('object')
 
         const data = { from, subject, text };
-        const requestOpts:any = {
+        const requestOpts: any = {
             method: "POST",
-            mode: 'no-cores',
-            headers: { "Content-Type": "application/x-www-form-urlencoded","Access-Control-Allow-Origin":"http://localhost:3000/mail/"},
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
             body: JSON.stringify(data)
         };
         fetch("http://localhost:3000/mail/", requestOpts)
@@ -27,8 +30,8 @@ export default function ContactUs() {
 
     return (
         <div className="contactUsComp">
-            <input type="email" id="mail" placeholder="enter your mail" className="inputMail" onChange={onFromChange}/>
-            <input type="text" id="subject" placeholder="enter your subject" className="inputSubject" onChange={onSubjectChange}/>
+            <input type="email" id="mail" placeholder="enter your mail" className="inputMail" onChange={onFromChange} />
+            <input type="text" id="subject" placeholder="enter your subject" className="inputSubject" onChange={onSubjectChange} />
             <textarea id="textarea" placeholder="enter your demande" className="textarea" onChange={onTextChange}></textarea>
             <input type="submit" value="Send a mail" className="submit" onClick={handleSubmit} />
         </div>
