@@ -1,15 +1,18 @@
 var nodemailer = require('nodemailer');
 var express = require('express');
+var cors = require('cors')
 var app = express();
-require('dotenv').config({ path: './.env' })
+require('dotenv').config()
 
 app.use(require('body-parser').urlencoded({ extended: false }));
+app.use(express.json)
+app.use(cors())
 
 var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
       user: 'invertime.off@gmail.com',
-      pass: ProcessingInstruction.env.MAILPASS
+      pass: process.env.MAILPASS
     }
   });
   
@@ -17,7 +20,10 @@ var transporter = nodemailer.createTransport({
 
 app.post('/mail/', function(req, res){
 
+  console.log('test')
+
     req.body;
+    console.log(req.body)
     //res.send(req.body)
     var mailOptions = {
       from: req.body.from,
