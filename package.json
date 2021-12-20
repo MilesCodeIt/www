@@ -1,0 +1,20 @@
+{
+  "name": "milescodeit.github.io",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "sass": "^1.45.0",
+    "typescript": "^4.4.4",
+    "vite": "^2.7.2"
+  },
+  "dependencies": {
+    "@fontsource/roboto": "^4.5.1",
+    "add": "^2.0.6",
+    "yarn": "^1.22.17"
+  }
+}

@@ -1,0 +1,9 @@
+# Dependencies
+node_modules
+
+# Build
+dist
+
+# Miscs
+.DS_Store
+*.local

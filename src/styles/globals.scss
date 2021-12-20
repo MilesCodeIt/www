@@ -1,0 +1,129 @@
+@import "utils/reset";
+@import "utils/base";
+
+body {
+  background: #090712;
+  color: #fff;
+}
+
+body, h1 {
+  font-family: 'Roboto', sans-serif;
+}
+
+html::-webkit-scrollbar {
+  width: 10px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: rgb(136, 136, 136);
+  border-radius: 10px;
+  height: 30px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: rgb(100, 100, 100);
+  border-radius: 10px;
+  height: 30px;
+}
+
+html::-webkit-scrollbar-thumb:active {
+  background: rgb(68, 68, 68);
+  border-radius: 10px;
+  height: 30px;
+}
+
+.hero {
+  // overflow: hidden;
+  position: relative;
+
+  .center {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    img.logo {
+      height: 272px;
+      z-index: 50;
+    }
+  }
+
+  .blobs {
+    @media screen and (max-width: 1200px) {
+      *{
+        display: none;
+      }
+    }
+
+    * {
+      height: 60%;
+      width: fit-content;
+      position: absolute;
+    }
+
+    :nth-child(1) {
+      top: -224px;
+      left: -198px;
+    }
+    :nth-child(2) {
+      top: -367px;
+      left: 596px;
+    }
+    :nth-child(3) {
+      top: -286px;
+      right: 50px;
+    }
+    :nth-child(4) {
+      top: 485px;
+      right: 174px;
+    }
+    :nth-child(5) {
+      top: 551px;
+      left: 126px;
+      z-index: 100;
+    }
+  }
+}
+
+.about {
+  text-align: center;
+  
+  h1 {
+    font-size: 96;    
+    text-decoration: underline #fff 5px;
+  }
+
+  .text {
+    font-size: 48;
+
+    * {
+      padding: 20px;
+    }
+  }
+}
+
+.technos {
+  text-align: center;
+  
+  h1 {
+    font-size: 96;
+    text-decoration: underline #fff 5px;
+  }
+
+  .technoUsedList {
+    margin: 50px;
+
+    li {
+      font-size: 48;
+      margin: 30px;
+    }
+  }
+}
+
+.contact {
+  text-align: center;
+
+  h1 {
+    font-size: 96;
+  }
+}
