@@ -1,0 +1,18 @@
+---
+// 1. The frontmatter prop gives access to frontmatter and other data
+const { frontmatter } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{frontmatter.title}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <article>
+        <h1>{frontmatter.title}</h1>
+      <slot />
+    </article>
+  </body>
+</html>

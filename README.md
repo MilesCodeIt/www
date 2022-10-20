@@ -1,21 +1,17 @@
-# MilesCode Website
+# MilesCode - Website
 
-> Minimal website of MilesCode
+Minimal website of MilesCode.dev made with Astro + SolidJS based on [AstroWind](https://github.com/onwidget/astrowind).
 
-## Made with
-- HTML
-- SCSS
-- Vanilla TypeScript
+## Roadmap
 
-Front-end design from [Invertime](https://github.com/Invertime).
+- Create a blog where we can post stuff
+- French/English support
 
 ## Development
 
 ```bash
-# Install dependencies.
-yarn
-# Start the development server on port 3000.
-yarn dev
+pnpm install
+pnpm dev
 ```
 
-You can run `yarn build` to build the website.
+You can run `pnpm build` to build the production build.
