@@ -3,14 +3,21 @@
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "Node",
+    
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
+    "isolatedModules": true,
+    
     "jsx": "preserve",
     "jsxImportSource": "solid-js",
-    "types": ["vite/client"],
+    
+    "types": [
+      "vite/client",
+      "vite-plugin-pages/client-solid"
+    ],
+    
     "noEmit": true,
     "strict": true,
-    "isolatedModules": true,
 
     "paths": {
       "@/*": ["./src/*"]
