@@ -1,0 +1,23 @@
+{
+  "name": "www",
+  "version": "0.0.0",
+  "description": "Website for the MilesCode duo.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.2.5",
+    "@unocss/preset-uno": "^0.52.4",
+    "@unocss/transformer-variant-group": "^0.52.4",
+    "@unocss/vite": "^0.52.4",
+    "typescript": "^4.9.5",
+    "vite": "^4.3.9",
+    "vite-plugin-solid": "^2.7.0"
+  },
+  "dependencies": {
+    "@unocss/reset": "^0.52.4",
+    "solid-js": "^1.7.5"
+  }
+}
